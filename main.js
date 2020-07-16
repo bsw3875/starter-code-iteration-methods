@@ -40,13 +40,12 @@ printKata(1, activeUsers)
 //Map over the users array to show only the email addresses of the users.
 
 
-const usersEmail = users.filter(user => users.includes(user.usersEmail))
-    .map(user => user.usersEmail)
+//const usersEmail = users.filter(user => users.includes(user.usersEmail))
+
+const usersEmail = users.map(user => user.email)
+// .map(user => user.usersEmail)
 printKata(2, usersEmail)
-
 //const usersEmail = users.map(user => user.usersEmail)
-//const usersEmail = users.map(user => user.usersEmail)
-
 
 
 // //Kata 3: Use the .some() method
@@ -67,7 +66,7 @@ printKata(3, user)
 //  age: 38
 
 // }];
-const array = users.find(element => element > 38)
+const array = users.find(element => element.age = 38)
 //const usersAge = users.find(user => user.usersAge = 38)
 
 printKata(4, array)
@@ -78,9 +77,9 @@ printKata(4, array)
 
 //const user = user.filter(user =>firstUser)
 
-const firstUser = users.filter(user => user.firstUser === 38)
-    .find(user => user.firstUser)
-printKata(5, firstUser)
+const userAge = users.filter(user => user.age >= 38)
+    .find(user => user.isActive)
+printKata(5, userAge)
 //const usersAgeLarger = users.find(user => user.usersAgeLarger === "users age larger")
 //const usersActive = users.filter(user => user.usersActive === "user active")
 
@@ -100,9 +99,10 @@ printKata(6, data)
 // //Show the age of every user with the "fugiat" tag.
 
 
-const ages = users.filter(user => users.includes(user.tags === "fugiat"))
-    //.includes(user => user.tag)
+const ages = users.filter(user => user.age)
     .map(user => user.age)
+    .includes(user.tags === "fugiat")
+
 printKata(7, ages)
        // .filter(data => {
           //  return data.type === 'first user';
